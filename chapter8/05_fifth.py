@@ -55,7 +55,7 @@ class BST:
 
 
 for _ in range(int(input())):
-    pre = list(map(int, input().replace('pre: ', '').replace(',', '').split(' ')))
-    post = list(map(int, input().replace('post: ', '').replace(',', '').split(' ')))
+    pre = list(map(int, input().replace('pre:', '').replace(',', ' ').split()))
+    post = list(map(int, input().replace('post:', '').replace(',', ' ').split()))
     tree = BST.create_bst_from_pre_post(pre, post)
     print(tree.g(tree.root)[0])
